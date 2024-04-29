@@ -6,7 +6,7 @@
 
 ## Team Members
 
-<< List team member names >>
+Lola Chan
 
 ***
 
@@ -20,7 +20,7 @@
 
 ### Initial Design
 
-![initial gui](assets/gui.jpg)
+![initial gui](assets/temp_gui.jpg)
 
 ### Final Design
 
@@ -30,15 +30,22 @@
 
 ### Features
 
-1. << Feature 1 >>
-2. << Feature 2 >>
-3. << Feature 3 >>
-4. << Feature 4 >>
-5. << Feature 5 >>
+1. Start menu
+2. Game over screen
+3. Moveable character
+4. Obstacle collision
+5. Scrolling background
 
 ### Classes
 
-- << You should have a list of each of your classes with a description >>
+class Player:
+    def __init__(self, screen, x, y, height, width, player_img):
+    
+
+- Enemy
+- World
+- Tiles
+- Soul: pick up three from around map to end game
 
 ## ATP
 
