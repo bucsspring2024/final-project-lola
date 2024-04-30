@@ -1,6 +1,6 @@
 import pygame
 import pygame.freetype
-from constants import Constants
+from src.constants import Constants
 
 pygame.init()
 pygame.freetype.init()

@@ -1,13 +1,15 @@
 import pygame
 import pygame.freetype
-from menu import Menu
+from src.menu import Menu
 from src.constants import Constants
+from src.game import Game
 
 pygame.init()
 pygame.freetype.init()
 
 BG_COLOR = (50, 50, 50) #Replace with bg img later
 GAME_FONT = pygame.freetype.Font(None, size = 30)
+
 
 
 class Controller:
@@ -18,7 +20,7 @@ class Controller:
     """
     self.screen = pygame.display.set_mode((960, 540))
     self.width, self.height = pygame.display.get_window_size()
-    print(self.width, self.height)
+    pygame.display.set_caption("Soul Finder")
     
     self.background = pygame.Surface((self.width, self.height))
     self.background_color = BG_COLOR
@@ -76,9 +78,10 @@ class Controller:
       pygame.display.update()
       
 
-  def gameloop(self):
+  def gameloop(self, screen):
       #event loop
-    game = Menu()
+    game = Game()
+    screen.blit()
     while self.state == "game":
       events = pygame.event.get()
       for event in events:
@@ -86,8 +89,10 @@ class Controller:
           pygame.quit()
           exit()
       #update data
+      
 
       #redraw
+      self.screen.fill(BG_COLOR)
     
   # def gameoverloop(self):
   #     #event loop

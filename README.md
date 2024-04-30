@@ -41,6 +41,12 @@ Lola Chan
 
 class Player:
     def __init__(self, screen, x, y, height, width, player_img):
+        self.screen = screen
+        self.x = x
+        self.y = y
+        self.height = height
+        self.width = width
+        self.player_img = player_img.png
     
 
 - Enemy
@@ -50,8 +56,52 @@ class Player:
 
 ## ATP
 
-| Step                 |Procedure             |Expected Results                   |
-|----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+Test Case 1: Menu --- test navigation through the game's main menu
+| Step  |Procedure                           |Expected Results                           |
+|-------|:----------------------------------:|------------------------------------------:|
+|  1    | Start the game                     |                                           |
+|  2    | Navigate through menu options      |                                           |
+|       |   (start and quit game)            |                                           |
+|  3    | Verify each option is selectable   |The main menu should allow the player to   |
+|       |   and leads to expected actions    |navigate through options and select them.  |
+
+
+Test Case 2: Spawn Test --- test player spawns on center of screen without falling through the ground
+| Step  |Procedure                           |Expected Results                           |
+|-------|:----------------------------------:|------------------------------------------:|
+|  1    | Start the game                     |                                           |
+|  2    | Check if player spawns without     |                                           |
+|       |   falling through the ground       |                                           |
+|       |                                    | Player spawns on the ground               |
+
+
+Test Case 3: Player Movement --- test if player can move left, right, and jump
+| Step  |Procedure                           |Expected Results                           |
+|-------|:----------------------------------:|------------------------------------------:|
+|  1    | Start the game                     |                                           |
+|  2    | Press 'a'                          |                                           |
+|  3    | Verify the player moves left       |                                           |
+|  4    | Press 'b'                          | The player should move left and right     |
+|  5    | Verify the player moves right      | in response to 'a' and 'd' keys           |
+
+
+Test Case 4: Collision Detection --- player should collide with walls and flooring
+| Step  |Procedure                           |Expected Results                           |
+|-------|:----------------------------------:|------------------------------------------:|
+|  1    | Start the game                     |                                           |
+|  2    | Walk towards the left wall         |                                           |
+|  3    | Verify that the player cannot phase| The player should be able to jump on      |
+|       | through the walls                  | blocks and hit walls                      |
+
+
+Test Case 5: Animation --- player should have walking and jumping animations
+| Step  |Procedure                           |Expected Results                           |
+|-------|:----------------------------------:|------------------------------------------:|
+|  1    | Start the game                     |                                           |
+|  2    | Press 'a'                          |                                           |
+|  3    | Verify player is facing left and   |                                           |
+|       | has a walking animation            |                                           |
+|  4    | Press spacebar                     |                                           |
+|  5    | Verify the player has a jumping    | The player should move and animate in     |
+|       | animation                          | response to 'a', 'd', and spacebar        |
+

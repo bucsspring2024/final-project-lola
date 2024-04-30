@@ -1,8 +1,8 @@
 import pygame
 from src import tiles
-import player
-import world
-import constants
+from src.player import Player
+from src.world import World
+from src.constants import Constants
 
 pygame.init()
 screen = pygame.display.set_mode((960, 540))
